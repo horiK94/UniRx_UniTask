@@ -16,6 +16,7 @@ public class ReplaySubjectSample : MonoBehaviour
             subject.OnNext(i);
         }
 
+        //OnNextがSiubScribeされる3つ前まで保持される
         subject.OnCompleted();
         //2回目のOnCompletedは通常通り呼ばれない
         subject.OnCompleted();
@@ -26,5 +27,7 @@ public class ReplaySubjectSample : MonoBehaviour
             x => Debug.Log(x),
             ex => Debug.Log("Error" + ex),
             () => Debug.Log("OnCompleted"));
+
+        subject.Dispose();
     }
 }
