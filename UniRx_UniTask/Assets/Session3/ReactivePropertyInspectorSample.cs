@@ -8,4 +8,6 @@ public class ReactivePropertyInspectorSample : MonoBehaviour
     public ReactiveProperty<int> genericType = new ReactiveProperty<int>();
 
     public IntReactiveProperty intReactiveProperty = new IntReactiveProperty();
-}
+
+    public FruitsEnumReactiveProperty fruits = new FruitsEnumReactiveProperty();
+} 
